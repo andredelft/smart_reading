@@ -21,7 +21,7 @@ philosopher to live where he liked; and Holland became, with a few
 interruptions, his chosen residence for the next twenty years (1629-49).
 Even here frequent changes of residence and occasional concealment of his
 address were necessary in order to elude the visits of importunate
-admirers. With all his unsociability there seems to have {32} been
+admirers. With all his unsociability there seems to have been
 something singularly magnetic about the personality of Descartes; yet he
 only fell in with one congenial spirit, the Princess Elizabeth, daughter of
 the unfortunate Winter King and granddaughter of our James I. Possessing to
@@ -47,7 +47,7 @@ attendance in her library to give her lessons in philosophy at five o'clock
 in the morning. Descartes was by habit a very late riser. Besides, he had
 not even a lodging in the royal palace, but was staying at the French
 Embassy, and in going there "had to pass over a long bridge which was
-always bitterly cold." The cold {33} killed him. He had arrived at
+always bitterly cold." The cold killed him. He had arrived at
 Stockholm in October, and meant to leave in January; but remained at the
 urgent request of the Queen, who, however, made no change in the hour of
 their interviews, although that winter was one of the severest on record.
@@ -78,9 +78,9 @@ what was true was not new. However, the place we must assign Descartes in
 the history of philosophy can only be determined by our opinion of his
 metaphysics.
 
-{34}
+ 
 
-{35} As a philosopher Descartes has, to begin with, the merit of exemplary
+ As a philosopher Descartes has, to begin with, the merit of exemplary
 clearness. The fault is not with him if we cannot tell what he thought and
 how he came to think it. The classic _Discourse on Method_ (1637) relates
 his mental history in a style of almost touching simplicity. It appears
@@ -102,7 +102,7 @@ exception that proved the rule; being, as Descartes observes, a
 supernatural revelation, not the natural knowledge that he wanted.
 
 The conflict of authorities had at least one good result, which was to
-discredit the very notion of {36} authority, thus throwing the inquirer
+discredit the very notion of authority, thus throwing the inquirer
 back on his own reason as the sole remaining resource. And as mathematics
 seemed, so far, to be the only satisfactory science, the most reasonable
 course was to give a wider extension and application to the methods of
@@ -129,7 +129,7 @@ fallacies.
 
 After reserving a provisional assent to the customs of the country where he
 happens to be residing and to the creed of the Roman Church, Descartes
-begins by calling in question the whole mass of beliefs he has {37}
+begins by calling in question the whole mass of beliefs he has 
 hitherto accepted, including the reality of the external world. But the
 very act of doubt implies the existence of the doubter himself. I think,
 therefore I am. It has been supposed that the initial affirmation of this
@@ -156,7 +156,7 @@ immateriality of the soul. Here it is fully admitted that, besides
 thinking, self-consciousness covers the functions of perceiving, feeling,
 desiring, and willing; nor does it seem to be pretended that these
 experiences are reducible to forms of thought. But it is claimed that they
-depend on {38} thought in the sense that without thought one would not be
+depend on thought in the sense that without thought one would not be
 aware of their existence; whereas it can easily be conceived without them.
 A little more introspection would show that the second part of the
 assertion is not true; for there is no thought without words, and no words,
@@ -182,7 +182,7 @@ of how he came to possess it. One might suggest that the consciousness of
 perfect self-knowledge, combined with the wish to know more of other
 subjects, would be sufficient to create an ideal of omniscience, and,
 proceeding in like manner from a comparison of wants with their
-satisfactions, to enlarge this ideal into the {39} notion of infinite
+satisfactions, to enlarge this ideal into the notion of infinite
 perfection all round. Descartes, however, is not really out for truth--at
 least, not in metaphysics; he is out for a justification of what the
 Jesuits had taught him at La Flèche, and no Jesuit casuistry could be more
@@ -208,7 +208,7 @@ depending in any way on the others; so that my having been a little while
 ago is no reason why I should be now, unless there is some power by which I
 am created anew. Here we must observe that Descartes is playing fast and
 loose with the law of causation. By what he calls the light of nature--in
-other words, the light of Greek {40} philosophy--things can no more pass
+other words, the light of Greek philosophy--things can no more pass
 into nothing than they can come out of it. Moreover, the difficulty is the
 same for my supposed Creator as for myself. We are told that thought is a
 necessary perfection of the divine nature. But thinking implies time;
@@ -235,7 +235,7 @@ substances communicating movements to one another. And he has a tendency to
 accept whatever is clearly and distinctly conceived by him as true. But to
 suppose that God created that tendency with the intention of deceiving him
 would argue a want of veracity in the divine nature incompatible with its
-{41} perfection. Such reasoning obviously ignores the alternative that God
+ perfection. Such reasoning obviously ignores the alternative that God
 might be deceiving us for our good. Or rather what we call truth might not
 be an insight into the nature of things in themselves, but a correct
 judgment of antecedents and consequents. Our consciousness would then be a
@@ -262,7 +262,7 @@ intellectual assent as an act of the will. When our judgments go beyond
 what is guaranteed by a clear and distinct perception of their truth there
 is a possibility of error, and then the error is our own fault, the
 precipitate conclusion having been a voluntary act. Thus human free-will
-intervenes to clear God of all {42} responsibility for our delusions as
+intervenes to clear God of all responsibility for our delusions as
 well as for our crimes.
 
 MALEBRANCHE.
@@ -289,7 +289,7 @@ acted on by vibrations from the external world, or when a particular
 movement is willed by the mind, the corresponding mental and material
 modifications are miraculously produced by the exercise of his omnipotence;
 and it is because these events occur _on occasion_ of signals of which they
-{43} are not the effects but the consequents that the theory has received
+ are not the effects but the consequents that the theory has received
 the name of Occasionalism.
 
 The theory, as Geulincx formulated it, seems at first sight simply
@@ -315,7 +315,7 @@ At the end of that period he published his masterpiece, _On the
 Investigation of Truth_ (_De la Recherche de la Vérité, 1674_), which at
 once won him an enormous reputation. It was followed by other works of less
 importance. The legend that Malebranche's end was hastened by an argument
-with Berkeley has been disproved. {44}
+with Berkeley has been disproved. 
 
 Without acknowledging the obligation, Malebranche accepts the conclusions
 of Geulincx to the extent of denying the possibility of any communication
@@ -343,7 +343,7 @@ God. As a mathematician would say, God must be the _locus_, the place of
 souls.
 
 There is unquestionably something grandiose about this theory, which,
-however, has the defect in orthodox {45} opinion of logically leading to
+however, has the defect in orthodox opinion of logically leading to
 the Pantheism, held in abhorrence by Malebranche, of his greater
 contemporary Spinoza. And it is a suggestive circumstance that the very
 similar philosophy of the Eternal Consciousness held by our countryman
@@ -370,7 +370,7 @@ Portuguese Jews, exiled on account of their Hebrew faith, in which also he
 was brought up. Soon after reaching manhood he fell away from the
 synagogue, preferring to share in the religious exercises of certain
 latitudinarian Christian sects. Spies were set to report his conversation,
-which soon supplied evidence of sufficiently heterodox opinions. {46} A
+which soon supplied evidence of sufficiently heterodox opinions. A
 sentence of formal excommunication followed; but modern research has
 discredited the story of an attempt to assassinate him made by an emissary
 of the synagogue. After successfully resisting the claim of his sister and
@@ -396,12 +396,12 @@ danger would be incurred by such a step, prevented him from placarding the
 walls of the Hague, where he then resided, with an address reproaching the
 infuriated people for their crime.
 
-{47}
+ 
 
 [Illustration: Reproduced (by permission) from _Spinoza's Short Treatise on
 God, Man, and his Well-being_, by Professor A. Wolf (A. & C. Black).]
 
-{48}
+ 
 
 In 1673 the enlightened ruler of the Palatinate, a brother of Descartes's
 Princess Elizabeth, offered Spinoza a professorship at Heidelberg, with
@@ -430,7 +430,7 @@ intellectual beliefs are not only mischievous, but totally invalid. They
 rest on the authority of the Bible as a revelation of God's will. But no
 such supernatural revelation ever was or could be given. Such violation of
 the order of nature as the miracles recorded in Scripture history would be
-impossible. And the narratives recording them are discredited by {49} the
+impossible. And the narratives recording them are discredited by the
 criticism which shows that various books of the Old Testament were not
 written by the men whose names they bear, but long after their time. As a
 Hebrew scholar Spinoza discusses the Jewish Scriptures in some detail,
@@ -457,7 +457,7 @@ the human mind, while Thought and Extension are not deduced at all.
 To appreciate the work of the Hebrew philosopher, of the lonely muser, bred
 in the religion of Jahveh--a name traditionally interpreted as the very
 expression of absolute self-existence--we must conceive him as starting
-with a question deeper even than the Cartesian {50} doubt, asking not How
+with a question deeper even than the Cartesian doubt, asking not How
 can I know what is? but Why should there _be_ anything whatever? And the
 answer, divested of scholastic terminology, is: Because it is inconceivable
 that there should be nothing, and if there is anything there must be
@@ -483,7 +483,7 @@ identified with Extension. It has been seen what difficulties were created
 by the radical Cartesian antithesis between Thought and Extension, or--to
 call them by their more familiar names--mind and body, when taken together
 with the intimate association shown by experience to obtain between them;
-and also how {51} Geulincx and Malebranche were led on by the very spirit
+and also how Geulincx and Malebranche were led on by the very spirit
 of philosophy itself almost to submerge the two disparate substances in the
 all-absorbing agency of God. The obvious course, then, for Spinoza, being
 unfettered by the obligations of any Christian creed, was to take the last
@@ -510,7 +510,7 @@ Bruno, whom Spinoza is held, on strong grounds, to have read, identified
 God with the supreme unifying principle of a universe extending through
 infinite space. Descartes, on the other hand, conceived God as a thinking
 rather than as an extended substance. But his school tended, as we saw, to
-conceive God as mediating {52} between mind and body in a way that
+conceive God as mediating between mind and body in a way that
 suggested their real union through his power. Furthermore, the habit common
 to all Cartesians of regarding geometrical reasoning as the most perfect
 form of thought inevitably led to the conception of thought as accompanying
@@ -536,7 +536,7 @@ co-existence, which is space, the infinite of causal procession, which is
 time, suggest an infinity of unimaginable but not inconceivable attributes
 of which the one divine substance consists. And here at last we get the
 explanation of why there should be such things as Thought and Extension at
-all. They are there simply because everything is. If I grant {53}
+all. They are there simply because everything is. If I grant 
 anything--and I must, at least, grant myself--I grant existence, which,
 having nothing outside itself, must fill up all the possibilities of being
 which only exclude the self-contradictory from their domain. Thus, the
@@ -563,7 +563,7 @@ of the empirical truth that there is a close connection between body and
 mind. Like the double-aspect theory, the parallelistic theory, the
 materialistic theory, the theory of interaction, and the theory of more or
 less complete reciprocal independence, it is a mere verbalism, telling us
-nothing that we did not know before. Or, if there {54} is more, it consists
+nothing that we did not know before. Or, if there is more, it consists
 of the very questionable assumption that body and mind must come in
 somewhere to fill up what would otherwise be blank possibilities of
 existence. And this, like other metaphysical assumptions, is an
@@ -589,7 +589,7 @@ developing thought than they are. But to get at the true kernel of his
 teaching we must, like Goethe, disregard the logical husks in which it is
 wrapped up. And, as it happens, Spinoza has greatly facilitated this
 operation by printing his most interesting and suggestive discussions in
-the form of Scholia, Explanations, and Appendices. Even {55} these are not
+the form of Scholia, Explanations, and Appendices. Even these are not
 easy reading; but, to quote his own pathetic words, "If the way of
 salvation lay ready to hand, and could be found without great toil, would
 it be neglected by nearly everyone? But all glorious things are as
@@ -617,7 +617,7 @@ itself for us. To love God is to recognise our own vitality as a portion of
 that power, welcoming it with grateful joy as a gift from the universe
 whence we come. And to say that God loves himself with an infinite love is
 merely to say that the attribute of Thought eternally divides itself among
-an infinity of {56} thinking beings, through whose activity the universe
+an infinity of thinking beings, through whose activity the universe
 keeps up a delighted consciousness of itself.
 
 Spinoza declares by the very name of his great work that for him the
@@ -644,7 +644,7 @@ Spinoza repeats the lessons of moral philosophy in all ages and countries
 since its first independent constitution. In connecting the interests of
 morality with the interests of science as such, he follows the tradition of
 Athenian thought. In interpreting pantheism as an ethical enthusiasm of the
-universe he returns to the creed of Stoicism, and {57} strikes the keynote
+universe he returns to the creed of Stoicism, and strikes the keynote
 of Wordsworth's loftiest poetry. In fixing each man's place in nature as
 one among the infinite individuations of divine power he repeats another
 Stoic idea--with this difference, however, that among the Stoics it was
@@ -672,7 +672,7 @@ LEIBNIZ.
 
 G. W. Leibniz (1646-1716), son of a professor at the University of Leipzig,
 is marked by some of the distinguishing intellectual characters of the
-German genius. {58} Far more truly than Francis Bacon, this man took all
+German genius. Far more truly than Francis Bacon, this man took all
 knowledge for his province. At once a mathematician, a physicist, a
 historian, a metaphysician, and a diplomatist, he went to the bottom of
 whatever subject he touched, and enriched all his multifarious studies with
@@ -698,7 +698,7 @@ what is more, that the formulation by which alone it has been made
 available for fruitful application was his exclusive invention. In physics
 he is a pioneer of the conservation of energy. In geology he starts the
 theory that our planet began as a glowing molten mass derived from the sun;
-and the modern {59} theory of evolution is a special application of his
+and the modern theory of evolution is a special application of his
 theory of development.
 
 Intellect alone, however, does not make a great philosopher; character also
@@ -724,7 +724,7 @@ reversion of the offices left vacant by his chief's decease.
 
 A single theory of Leibniz has attained more celebrity than any one
 utterance of any other philosopher; but that fame is due to the undying
-fire in which it has been enveloped by the mocking irony of Voltaire. {60}
+fire in which it has been enveloped by the mocking irony of Voltaire. 
 Everything is for the best in the best of all possible worlds. Such is the
 famous text as a satire on which _Candide_ was composed. Yet whatever value
 Voltaire's objections to optimism may possess tells nearly as much against
@@ -749,7 +749,7 @@ result of moral freedom. Such an argument is only open to the believers in
 free-will. A world of free and responsible agents, they urge, is infinitely
 more valuable than a world of automata; and it is not too dearly purchased
 even at the cost of such suffering as we witness. The argument is not very
-convincing; for liberty of choice {61} in a painless world is quite
+convincing; for liberty of choice in a painless world is quite
 conceivable. But, be it a good or bad argument, although it might appeal to
 Voltaire, who believed in free-will, it could not decently be used by
 Leibniz, who was a determinist of the strictest type. To make this clear we
@@ -775,7 +775,7 @@ that infinite Power of which, according to Spinoza, the whole universe is
 at once the product and the expression; or it may have been suggested by
 Plato's incidental identification of Being with Action. But Leibniz found
 his type of force in human personality, which, following the lead of
-Aristotle {62} rather than of Plato, he conceived as an Entelechy, or
+Aristotle rather than of Plato, he conceived as an Entelechy, or
 realised Actuality, and a First Substance. After years of anxious
 reflection he chose the far happier name of Monad, a term originally coined
 by Bruno, but not, as would appear, directly borrowed from him by the
@@ -801,7 +801,7 @@ little Leibniz for ever increasing the sum of its knowledge.
 
 At no stage does that knowledge come from experience. The monad has no
 windows, no communication of any kind with the external world. But each
-reflects the whole universe, knowing what it knows by {63} mere
+reflects the whole universe, knowing what it knows by mere
 introspection. And each reflects all the others at a different angle, the
 angles varying from one another by infinitesimal degrees, so that in their
 totality they form a continuous series of differentiated individuals. And
@@ -828,7 +828,7 @@ philosophy as the system of pre-established harmony.
 It may be asked how every monad can possibly reflect every other monad when
 we do not know what is passing in our own bodies, still less what is
 passing all over the universe. The answer consists in a convenient
-distinction between clear and confused {64} perceptions, the one
+distinction between clear and confused perceptions, the one
 constituting our actual and the other our potential knowledge. A more
 difficult problem is to explain how any particular monad--Leibniz or
 another--can consistently be a monadologist rather than a solipsist

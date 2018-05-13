@@ -9,11 +9,11 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     
 setup(
     name = 'smart_reading',
-    version = '0.1.14',
+    version = '0.2.0',
     description = 'An NLTK-based toolkit aimed at increasing the understanding of various texts.',
     url = 'https://github.com/andredelft/smart_reading',
     packages = find_packages(),
-    install_requires = ['nltk','regex'],
+    install_requires = ['nltk'],
     keywords = 'ebook understanding nltk reading toolkit',
     long_description = long_description,
     include_package_data = True,
