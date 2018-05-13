@@ -15,7 +15,8 @@ class Book:
         if filename.endswith('.txt'):
             with open(filename) as f:
                 text = regex.sub(' ?{[0-9]+} ?',' ',f.read())
-            self.title = path.splitext(filename)[0]
+            self.path,self.title = path.split(filename)
+            self.title = path.splitext(self.title)[0]
             self.raw = text
             self.sents = [sent.replace('\n',' ') for sent in sent_tokenize(text)]
             self.tokens = word_tokenize(text)
@@ -23,7 +24,8 @@ class Book:
             self.entities = ne_chunk(self.tagged)
             self.NE = [child for child in self.entities if type(child) == nltk.tree.Tree]
             self.Text = nltk.Text(self.tokens)
-            print('Loaded ')
+            print("Succesfully loaded {} as an e-book".format(self.title),
+                  "Total n.o. tokens: {}".format(len(self.tokens)), sep = '\n')
         else:
             raise TypeError('Extension {} not supported.'.format(path.splitext(filename)[1]))
         
