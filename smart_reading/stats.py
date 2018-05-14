@@ -1,6 +1,7 @@
 import nltk
 from matplotlib import pyplot as plt
 import numpy as np
+import networkx as nx
 
 def noun_fdist(book, treshold = 0.2):
     nouns = []
@@ -27,3 +28,15 @@ def plot_most_common(book, N = 20, nouns = True):
     plt.title('Frequency plot of the {} most common {}'.format(N, 'nouns' if nouns else 'words'))
     fig.autofmt_xdate()
     fig.show()
+    
+def network_graph(book, N = 20):
+    fdist = noun_fdist(book)
+    top = dict(fdist.most_common(N))
+    labels = list(top.keys())
+    
+    G = nx.Graph()
+    G.add_nodes_from(labels)
+    
+    nx.draw(G)
+    nx.draw_networkx_labels(G, pos = nx.spring_layout(G))
+    plt.show()

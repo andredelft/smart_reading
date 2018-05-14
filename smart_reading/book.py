@@ -1,4 +1,4 @@
-import nltk as nltk
+import nltk
 from os import path,remove
 import re
 
