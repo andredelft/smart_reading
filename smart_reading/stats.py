@@ -3,8 +3,9 @@ from matplotlib import pyplot as plt
 import numpy as np
 import networkx as nx
 import re
+from itertools import combinations
 
-def noun_fdist(book, named_entities = True, exceptions = []):
+def _noun_fdist(book, named_entities = True, exceptions = []):
     # NB: named entity exclusion is based on NLTK's ne_chunk procedure, which
     # does not always work perfectly. See for example smart_reading.book.sample(),
     # which still includes 'Descartes', even when named_entities = False
@@ -28,7 +29,7 @@ def noun_fdist(book, named_entities = True, exceptions = []):
 
 def plot_freq_dist(book, N = 20, nouns = True, **kwargs):
     if nouns:
-        fdist = noun_fdist(book, **kwargs)
+        fdist = _noun_fdist(book, **kwargs)
         top = dict(fdist.most_common(N))
     else:
         fdist = nltk.FreqDist(token for token in book._tokens if re.search('[a-zA-Z]',token))
@@ -44,15 +45,31 @@ def plot_freq_dist(book, N = 20, nouns = True, **kwargs):
     fig.autofmt_xdate()
     fig.show()
     
-def plot_network_graph(book, N = 20, **kwargs):
-    fdist = noun_fdist(book, **kwargs)
-    top = dict(fdist.most_common(N))
+def plot_network_graph(book, no_nodes = 10, treshold = 3, exclude_empty = True, **kwargs):
+    fdist = _noun_fdist(book, **kwargs)
+    top = dict(fdist.most_common(no_nodes))
     labels = list(top.keys())
     
+    # Nodes
+    label_pairs = list(combinations(labels,2))
     G = nx.Graph()
-    G.add_nodes_from(labels)
+    if not exclude_empty:
+        G.add_nodes_from(labels)
+    
+    # Edges
+    dict_pairs = {pair: 0 for pair in label_pairs}
+    for sent in book.sents:
+        labels_in_sent = [label for label in labels if label.lower() in nltk.word_tokenize(sent.lower())]
+        for pair in combinations(labels_in_sent,2):
+            try:
+                dict_pairs[pair] += 1
+            except KeyError:
+                dict_pairs[(pair[1],pair[0])] += 1
+    G.add_weighted_edges_from((pair[0],pair[1],dict_pairs[pair]) for pair in label_pairs if dict_pairs[pair] >= treshold)
     
     fig = plt.figure()
-    nx.draw(G)
-    nx.draw_networkx_labels(G, pos = nx.spring_layout(G))
+    pos = nx.spring_layout(G)
+    colors = [edge[2] for edge in G.edges.data('weight')]
+    nx.draw(G, pos, with_labels=True, node_color='#A0CBE2', edge_cmap=plt.cm.coolwarm, edge_color = colors,
+            font_weight='bold', node_shape = 'o', width = 3)
     fig.show()
