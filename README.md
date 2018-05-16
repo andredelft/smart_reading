@@ -43,12 +43,14 @@ As mentioned, the given text are imported into a `smart_reading.book.Book` objec
 #### Concordance
 
 A concordance is developed as an extension of the `nltk.Text.concordance` function, which incorporates [example 3.6](http://www.nltk.org/book/ch03.html#code-stemmer-indexing) of the NLTK manual, such that it not only matches with exact copies of a given word, but also inflections:
-```python
+```pycon
 >>> import smart_reading as sr
 >>> bk = sr.book.sample()
 Succesfully loaded 'Benn_Ch_II_The_Metaphysicians.txt' as an e-book
 Total n.o. tokens: 10420
 >>> bk.concordance('philosopher')
+```
+```
 Displaying 17 of 17 matches:
 nce of an independent income enabled the philosopher to live where he liked ; and
 by our opinion of his metaphysics . As a philosopher Descartes has , to begin wit
@@ -68,11 +70,11 @@ peppers his pages . Yet , like the Greek philosophers , he is much more modern ,
 rity than any one utterance of any other philosopher ; but that fame is due to th
  work . On _à priori_ grounds the German philosopher seems to have an incontrover
 ```
-In order to deal with inflections, the stemmer `nltk.PorterStemmer` is used by default. Other stemmers can be sent 
+In order to deal with inflections, the stemmer `nltk.PorterStemmer` is used by default. Other stemmers can be sent through the keyword *stemmer* when importing a textfile.
 
 #### `nltk.text.Text` attribute
 
-A `smart_reading.book.Book` object always has an attribute `Text`, which is an `nltk.text.Text` object and as such includes all its attributes as developed by NLTK, like finding collocations, similar words, and creating disperion plots.
+A `smart_reading.book.Book` object always has an attribute `Text`, which is an `nltk.text.Text` object and as such includes all its attributes as developed by NLTK, like finding collocations, similar words, and creating disperion plots. See the [NLTK API](https://www.nltk.org/api/nltk.html#nltk.text.Text) for its full documentation
 ```python
 >>> bk.Text.collocations()
 fullest extent; infinite Power; material world; Princess Elizabeth;
@@ -87,13 +89,22 @@ mathematical method; divine substance
 
 #### The `smart_reading.stats` submodule
 
-The `smart_reading` module comes with a `stats` module, which provides different 
+The `smart_reading` module comes with a `stats` module, which can create different graphs of a given textfile, created using `matplotlib.pyplot` by the following functions:
 
 ##### plot_noun_dist(book, no_nouns = 20, named_entities = True, exceptions = [], **kwargs)
 
-
+A frequency histogram of the most common nouns appearing in given text.
+* *no_nouns*: Number of nouns that will be included in the graph (i.e. number of bars).
+* *named_entities*: If False, this will exclude named entities that are recognized by the `nltk.chunk.ne_chunk` routine. This option is not supported in versions of Python 2.
+* *exceptions*: An iterable of nouns that will be excluded from the analysis
+* Further keyword arguments are passed to `matplotlib.pyplot.fig`.
 
 ##### plot_network_graph(book, no_nouns = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs)
 
-following the [temperature color scheme](https://en.wikipedia.org/wiki/Color_temperature).
+A network graph depicting the relationship between frequently appearing graphs. The nouns appear as nodes, and edges are drawn between nouns if they appear frequently in the same sentences. A [temperature color scheme](https://en.wikipedia.org/wiki/Color_temperature) is used on the edges to depict the frequency in which nouns appear together (red = very often, blue = a few times).
+* *no_nouns*: Number of nouns that will be included in the graph (i.e. number of nodes). Can become less if *exclude_empty* is True, see below.
+* *treshold*: The minimal number of sentences in which two given nouns have to appear in order for an edge to be drawn. Can be used to simplify graphs with a lot of edges.
+* *exclude_empty*: if True, this will exclude the nodes from the graph that do not have edges. Note that this will reduce the number of nouns depicted, as declared in *no_nouns* above
+* *exceptions*: an iterable of nouns that will be excluded from the analysis.
+* Further keyword arguments are passed to `matplotlib.pyplot.fig`.
 
