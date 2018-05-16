@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     
 setup(
     name = 'smart_reading',
-    version = '1.0.1',
+    version = '1.1.2',
     description = 'An NLTK-based toolkit aimed at increasing the understanding of various texts.',
     url = 'https://github.com/andredelft/smart_reading',
     packages = find_packages(),
@@ -19,11 +19,11 @@ setup(
     long_description_content_type='text/markdown',
     include_package_data = True,
     python_requires = '>=2.7',
+    author = 'Andre van Delft',
+    author_email='andrevandelft@outlook.com',
     classifiers = [
-        'Development Status :: 3 - Alpha',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4'
+        'Development Status :: 4 - Beta',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3'
     ]
 )

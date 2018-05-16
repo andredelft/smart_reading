@@ -71,11 +71,11 @@ class Book:
 def sample(type = 'txt', **kwargs):
     here = path.abspath(path.dirname(__file__))
     if type in ['txt','.txt']:
-        return Book(path.join(here,'Benn_Ch_II_The_Metaphysicians.txt'), **kwargs) # Downloaded from Project Gutenberg
+        return Book(path.join(here,path.join('samples','Benn_Ch_II_The_Metaphysicians.txt')), **kwargs) # Downloaded from Project Gutenberg
     elif type in ['pdf','.pdf']:
-        return Book(path.join(here,'PhysRev.47.777.pdf'), **kwargs)
+        return Book(path.join(here,path.join('samples','PhysRev.47.777.pdf')), **kwargs)
     elif type in ['epub','.epub']:
-        return Book(path.join(here,'Mason_Throwing_Sticks.epub'), **kwargs) # Downloaded from Project Gutenberg
+        return Book(path.join(here,path.join('samples','Galileo_The_Sidereal_Messenger.epub')), **kwargs) # Downloaded from Project Gutenberg
     else:
         print('\nNo sample available for document type \'{}\'\n'.format(type))
 

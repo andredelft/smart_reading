@@ -24,10 +24,10 @@ def _noun_fdist(book, named_entities = True, exceptions = []):
         nouns = [word.capitalize() for word,tag in book._tags if 'NN' in tag]
         
     nouns = [word for word in nouns if re.search('[a-zA-Z]',word) and not len(word) == 1
-             and not '.' in word and word not in exceptions] #filter erroneous symbols
+             and '.' not in word and word not in exceptions] #filter erroneous symbols
     return nltk.FreqDist(nouns)
 
-def plot_freq_dist(book, no_nouns = 20, named_entities = True, exceptions = [], **kwargs):
+def plot_noun_hist(book, no_nouns = 20, named_entities = True, exceptions = [], **kwargs):
     if nouns:
         fdist = _noun_fdist(book, named_entities, exceptions)
         top = dict(fdist.most_common(no_nouns))
