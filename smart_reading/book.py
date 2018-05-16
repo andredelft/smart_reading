@@ -6,7 +6,7 @@ if version_info[0] < 3:
     from io import open
 try:
     import textract
-except ModuleNotFoundError:
+except:
     print('\nWarning: Module \'textract\' not found on system. Will continue\n'
           'with limited support, only for .txt files and raw strings.\n'
           'Please install textract for full functionality.\n')
