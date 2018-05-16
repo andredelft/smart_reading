@@ -27,36 +27,35 @@ def _noun_fdist(book, named_entities = True, exceptions = []):
              and not '.' in word and word not in exceptions] #filter erroneous symbols
     return nltk.FreqDist(nouns)
 
-def plot_freq_dist(book, no_nodes = 20, nouns = True, named_entities = True, exceptions = [], **kwargs):
+def plot_freq_dist(book, no_nouns = 20, named_entities = True, exceptions = [], **kwargs):
     if nouns:
         fdist = _noun_fdist(book, named_entities, exceptions)
-        top = dict(fdist.most_common(no_nodes))
+        top = dict(fdist.most_common(no_nouns))
     else:
         fdist = nltk.FreqDist(token for token in book._tokens if re.search('[a-zA-Z]',token))
-        top = dict(fdist.most_common(no_nodes))
+        top = dict(fdist.most_common(no_nouns))
     
     fig = plt.figure(**kwargs)
-    plt.bar(np.arange(no_nodes), sorted(top.values(), reverse = True))
+    plt.bar(np.arange(no_nouns), sorted(top.values(), reverse = True))
     labels = sorted(top.keys(), key = lambda x: top[x], reverse = True)
     from sys import version_info
     offset = 0.5 if version_info[0] < 3 else 0.3 # Graphical depiction dependent on Python version
-    plt.xticks(np.arange(offset, offset + no_nodes), labels)
-    plt.title('Frequency plot of the {} most common {}'.format(no_nodes, 'nouns' if nouns else 'words'))
+    plt.xticks(np.arange(offset, offset + no_nouns), labels)
+    plt.title('Frequency plot of the {} most common {}'.format(no_nouns, 'nouns' if nouns else 'words'))
     fig.autofmt_xdate()
     fig.show()
     
-def plot_network_graph(book, no_nodes = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs):
+def plot_network_graph(book, no_nouns = 10, treshold = 3, exclude_singles = True,
+                       named_entities = True, exceptions = [], **kwargs):
     fdist = _noun_fdist(book, named_entities, exceptions)
-    top = dict(fdist.most_common(no_nodes))
+    top = dict(fdist.most_common(no_nouns))
     labels = list(top.keys())
-    
-    # Nodes
     label_pairs = list(combinations(labels,2))
     G = nx.Graph()
-    if not exclude_empty:
+    if not exclude_singles:
         G.add_nodes_from(labels)
     
-    # Edges
+    # Create edges:
     dict_pairs = {pair: 0 for pair in label_pairs}
     for sent in book.sents:
         labels_in_sent = [label for label in labels if label.lower() in nltk.word_tokenize(sent.lower())]

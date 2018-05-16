@@ -70,13 +70,30 @@ rity than any one utterance of any other philosopher ; but that fame is due to t
 ```
 In order to deal with inflections, the stemmer `nltk.PorterStemmer` is used by default. Other stemmers can be sent 
 
-#### `nltk.Text attribute
+#### `nltk.text.Text` attribute
+
+A `smart_reading.book.Book` object always has an attribute `Text`, which is an `nltk.text.Text` object and as such includes all its attributes as developed by NLTK, like finding collocations, similar words, and creating disperion plots.
+```python
+>>> bk.Text.collocations()
+fullest extent; infinite Power; material world; Princess Elizabeth;
+external world; paramount object; supernatural revelation; two
+attributes; necessarily exist; Queen Christina; early age; whole
+universe; final causes; mathematical demonstration; metaphysical
+system; perfection involves; best possible; many distinct;
+mathematical method; divine substance
+>>> bk.Text.dispersion_plot(['Descartes','Malebranche','Spinoza','Leibniz'])
+```
+![alt text](https://i.imgur.com/TgGu656.png "Lexical Dispersion Plot")
 
 #### The `smart_reading.stats` submodule
 
-##### plot_freq_dist(book, no_nodes = 20, nouns = True, named_entities = True, exceptions = [], **kwargs)
+The `smart_reading` module comes with a `stats` module, which provides different 
 
-##### plot_network_graph(book, no_nodes = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs)
+##### plot_noun_dist(book, no_nouns = 20, named_entities = True, exceptions = [], **kwargs)
+
+
+
+##### plot_network_graph(book, no_nouns = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs)
 
 following the [temperature color scheme](https://en.wikipedia.org/wiki/Color_temperature).
 
