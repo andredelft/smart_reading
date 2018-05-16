@@ -2,7 +2,7 @@
 
 ## About
 
-`smart_Reading` is a Python module designed for increasing the understanding of various textforms by using natural language processing. It is heavily based on tools available from the [Natural Language Toolkit](https://www.nltk.org) (NLTK), which are used in various applications and provided with extensions.
+`smart_reading` is a Python module designed for increasing the understanding of various textforms by using natural language processing. It is heavily based on tools available from the [Natural Language Toolkit](https://www.nltk.org) (NLTK), which are used in various applications and provided with extensions.
 
 ### Installation
 
@@ -48,7 +48,7 @@ As mentioned, the given text are imported into a `smart_reading.book.Book` type 
 
 ### Concordance
 
-A concordance is developed as an extension of the `nltk.text.Text.concordance` function, which incorporates [example 3.6](http://www.nltk.org/book/ch03.html#code-stemmer-indexing) of the NLTK manual, such that it not only matches with exact copies of a given word, but also inflections:
+A concordance is developed as an extension of the `nltk.text.Text.concordance` function that incorporates [example 3.6](http://www.nltk.org/book/ch03.html#code-stemmer-indexing) of the NLTK manual, such that it not only matches with exact copies of a given word, but also inflections:
 
 ```pycon
 >>> import smart_reading as sr
