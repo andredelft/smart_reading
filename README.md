@@ -30,13 +30,13 @@ Succesfully loaded 'PhysRev.47.777.pdf' as an e-book
 Total n.o. tokens: 3192
 <smart_reading.book.Book instance at 0x110c0ebd8>
 >>> sr.book.sample('epub')
-Succesfully loaded 'Mason_Throwing_Sticks.epub' as an e-book
-Total n.o. tokens: 13581
+Succesfully loaded 'Galileo_The_Sidereal_Messenger.epub' as an e-book
+Total n.o. tokens: 40372
 <smart_reading.book.Book instance at 0x105a46e60>
 ```
 ## Functionality
 
-As mentioned, the given text are imported into a `smart_reading.book.Book` object. The different tools that this object provides are listed below.
+As mentioned, the given text are imported into a `smart_reading.book.Book` type object. The different tools that this object provides are listed below.
 
 ### Concordance
 
@@ -70,7 +70,7 @@ In order to deal with inflections, the stemmer `nltk.PorterStemmer` is used by d
 
 ### `nltk.text.Text` attribute
 
-A `smart_reading.book.Book` object always has an attribute `Text`, which is an `nltk.text.Text` object and as such includes all its attributes as developed by NLTK, like finding collocations, similar words, and creating disperion plots. See the [NLTK API](https://www.nltk.org/api/nltk.html#nltk.text.Text) for its full documentation
+A `smart_reading.book.Book` object always has an attribute `Text`, which is an `nltk.text.Text` type object and as such includes all its attributes as developed by NLTK, like finding collocations, similar words, and creating disperion plots. See the [NLTK API](https://www.nltk.org/api/nltk.html#nltk.text.Text) for its full documentation
 ```pycon
 >>> bk.Text.collocations()
 fullest extent; infinite Power; material world; Princess Elizabeth;
@@ -85,9 +85,9 @@ mathematical method; divine substance
 
 ### The `smart_reading.stats` submodule
 
-The `smart_reading` module comes with a `stats` module, which can create different graphs of a given textfile, created using `matplotlib.pyplot` by the following functions:
+The `smart_reading` module comes with a `stats` submodule, which uses `matplotlib.pyplot` to create the following type of graps of a given text file:
 
-#### plot_noun_dist(book, no_nouns = 20, named_entities = True, exceptions = [], **kwargs)
+#### smart_reading.stats.plot_noun_dist(book, no_nouns = 20, named_entities = True, exceptions = [], **kwargs)
 
 A frequency plot of the most common nouns appearing in given text.
 * *no_nouns*: Number of nouns that will be included in the graph (i.e. number of bars).
@@ -96,13 +96,13 @@ A frequency plot of the most common nouns appearing in given text.
 * Further keyword arguments are passed to `matplotlib.pyplot.fig`.
 ```pycon
 >>> bk2 = sr.book.sample('pdf')
-Succesfully loaded 'EPR.txt' as an e-book
-Total n.o. tokens: 3208
+Succesfully loaded 'PhysRev.47.777.pdf' as an e-book
+Total n.o. tokens: 3192
 >>> sr.stats.plot_noun_dist(bk2)
 ```
 ![alt text](https://imgur.com/fRlb1aw.png "Frequency Plot")
 
-#### plot_network_graph(book, no_nouns = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs)
+#### smart_reading.stats.plot_network_graph(book, no_nouns = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs)
 
 A network graph created using `neworkx` depicting the relationship between frequently appearing graphs. The nouns appear as nodes, and edges are drawn between nouns if they appear frequently in the same sentences. A [temperature color scheme](https://en.wikipedia.org/wiki/Color_temperature) is used on the edges to depict the frequency in which nouns appear together (red = very often, blue = a few times).
 * *no_nouns*: Number of nouns that will be included in the graph (i.e. number of nodes). Can become less in the final result if *exclude_empty* is true, see below.
@@ -118,6 +118,6 @@ A network graph created using `neworkx` depicting the relationship between frequ
 >>> bk3 = sr.book.sample('epub')
 Succesfully loaded 'Galileo_The_Sidereal_Messenger.epub' as an e-book
 Total n.o. tokens: 40372
->>> sr.stats.plot_network_graph(bk3,no_nodes=15,treshold = 5)
+>>> sr.stats.plot_network_graph(bk3, no_nodes = 15, treshold = 5)
 ```
 ![alt text](https://imgur.com/EMMtmgv.png "Network Graph")
