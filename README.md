@@ -7,13 +7,17 @@
 ### Installation
 
 The module is available for Python 2.7+, but recommended to run on Python 3+ for a more thorough unicode support and prettier graphs. Install via pip (or any other desired client):
+
 ```
 $ pip install smart_reading
 ```
+
 or by downloading the source code on [PyPI](https://pypi.org/project/smart-reading/) or [GitHub](https://github.com/andredelft/smart_reading) and running the following command in the root folder:
+
 ```
 $ python setup.py install
 ```
+
 ## Importing texts
 
 The basic functionality of `smart_reading` is to import a given textfile into a `smart_reading.book.Book` object, which can be used to perform several developed analyses. Textfiles can be imported via the function `smart_reading.book.load(filename)`. This function utilizes the functionality of the module `textract` to extract textual information of almost any given data structure, including .txt, .pdf, .epub and .docx. See the [online manual](https://textract.readthedocs.io/en/stable/) for more details on the inner workings of this module. When this module is not found on the system, the program continues with a limited functionality, in which only .txt files can be read. This limited functionality is added because it is experienced that the installation of `textract` does not always succeed. The user that is not able to install `textract` but does want to import other text formats is encouraged to build alternative pipelines to extract text into a .txt file, which in turn can be imported in the `smart_reading.book.load` function.
@@ -112,7 +116,7 @@ Total n.o. tokens: 3192
 
 #### smart_reading.stats.plot_network_graph(book, no_nouns = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs)
 
-Create a network graph using the module `neworkx` which depicts the relationship between frequently appearing nouns. The nouns appear as nodes, and edges are drawn between nouns if they appear frequently in the same sentences. A [temperature color scheme](https://en.wikipedia.org/wiki/Color_temperature) is used on the edges to depict the frequency in which nouns appear together (red = very often, blue = a few times).
+Create a network graph using the module `networkx` which depicts the relationship between frequently appearing nouns. The nouns appear as nodes, and edges are drawn between nouns if they appear frequently in the same sentences. A [temperature color scheme](https://en.wikipedia.org/wiki/Color_temperature) is used on the edges to depict the frequency in which nouns appear together (red = very often, blue = a few times).
 * *no_nouns*: Number of nouns that will be included in the graph (i.e. number of nodes). Can become less in the final result if *exclude_empty* is true, see below.
 * *treshold*: The minimal number of sentences in which two given nouns have to appear in order for an edge to be drawn. Can be used to simplify graphs with a lot of edges.
 * *exclude_empty*: if True, this will exclude the nodes from the graph that do not have edges. Note that this will reduce the number of nouns depicted, as declared in *no_nouns* above
