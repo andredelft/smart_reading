@@ -106,13 +106,13 @@ Create a histogram of the most common nouns appearing in given text.
 >>> bk2 = sr.book.sample('pdf')
 Succesfully loaded 'PhysRev.47.777.pdf' as an e-book
 Total n.o. tokens: 3192
->>> sr.stats.plot_noun_dist(bk2)
+>>> sr.stats.plot_noun_hist(bk2)
 ```
 ![alt text](https://imgur.com/fRlb1aw.png "Frequency Plot")
 
 #### smart_reading.stats.plot_network_graph(book, no_nouns = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs)
 
-Create a network graph using the module `neworkx` which depicts the relationship between frequently appearing graphs. The nouns appear as nodes, and edges are drawn between nouns if they appear frequently in the same sentences. A [temperature color scheme](https://en.wikipedia.org/wiki/Color_temperature) is used on the edges to depict the frequency in which nouns appear together (red = very often, blue = a few times).
+Create a network graph using the module `neworkx` which depicts the relationship between frequently appearing nouns. The nouns appear as nodes, and edges are drawn between nouns if they appear frequently in the same sentences. A [temperature color scheme](https://en.wikipedia.org/wiki/Color_temperature) is used on the edges to depict the frequency in which nouns appear together (red = very often, blue = a few times).
 * *no_nouns*: Number of nouns that will be included in the graph (i.e. number of nodes). Can become less in the final result if *exclude_empty* is true, see below.
 * *treshold*: The minimal number of sentences in which two given nouns have to appear in order for an edge to be drawn. Can be used to simplify graphs with a lot of edges.
 * *exclude_empty*: if True, this will exclude the nodes from the graph that do not have edges. Note that this will reduce the number of nouns depicted, as declared in *no_nouns* above

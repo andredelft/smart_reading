@@ -16,11 +16,11 @@ setup(
     install_requires = ['nltk','networkx','numpy','matplotlib'],
     keywords = 'ebook understanding nltk reading toolkit',
     long_description = long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type = 'text/markdown',
     include_package_data = True,
     python_requires = '>=2.7',
     author = 'Andre van Delft',
-    author_email='andrevandelft@outlook.com',
+    author_email = 'andrevandelft@outlook.com',
     classifiers = [
         'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 2.7',
