@@ -40,7 +40,7 @@ class Book:
         self._stemmer = stemmer
         self._index = nltk.Index((self._stem(word), i) for (i, word) in enumerate(self.tokens))
         
-        print('\nSuccesfully loaded \'{}\' as an e-book\nTotal n.o. tokens: {}\n'.format(self.file,len(self.tokens)))
+        print('Succesfully loaded \'{}\' as an e-book\nTotal n.o. tokens: {}'.format(self.file,len(self.tokens)))
 
     def _stem(self, word):
         return self._stemmer.stem(word).lower()
@@ -57,8 +57,8 @@ class Book:
                 display_lines = no_locs if display_all else min(no_locs,lines)
                 print('Displaying {} of {} matches:'.format(display_lines,no_locs))
                 for i in self._index[key][:display_lines]:
-                    lcontext = ' '.join(self._tokens[i-wc:i])
-                    rcontext = ' '.join(self._tokens[i:i+wc])
+                    lcontext = ' '.join(self.tokens[i-wc:i])
+                    rcontext = ' '.join(self.tokens[i:i+wc])
                     ldisplay = u'{:>{width}}'.format(lcontext[-width:], width=width)
                     rdisplay = u'{:{width}}'.format(rcontext[:width], width=width)
                     print(u'{} {}'.format(ldisplay, rdisplay))
@@ -68,22 +68,22 @@ class Book:
             display_lines = len([token for token in book._tokens if token.lower() == word.lower()]) if display_all else lines
             self.Text.concordance(word, lines = display_lines, width = 2 * width)
         
-def sample(type = 'txt'):
+def sample(type = 'txt', **kwargs):
     here = path.abspath(path.dirname(__file__))
     if type in ['txt','.txt']:
-        return Book(path.join(here,'Benn_Ch_II_The_Metaphysicians.txt')) # Downloaded from Project Gutenberg
+        return Book(path.join(here,'Benn_Ch_II_The_Metaphysicians.txt'), **kwargs) # Downloaded from Project Gutenberg
     elif type in ['pdf','.pdf']:
-        return Book(path.join(here,'PhysRev.47.777.pdf'))
+        return Book(path.join(here,'PhysRev.47.777.pdf'), **kwargs)
     elif type in ['epub','.epub']:
-        return Book(path.join(here,'Mason_Throwing_Sticks.epub')) # Downloaded from Project Gutenberg
+        return Book(path.join(here,'Mason_Throwing_Sticks.epub'), **kwargs) # Downloaded from Project Gutenberg
     else:
         print('\nNo sample available for document type \'{}\'\n'.format(type))
 
-def fromstring(text, title = 'text_input'):
+def fromstring(text, title = 'text_input', **kwargs):
     filename = '{}.txt'.format(title)
     with open(filename,'w') as f:
         f.write(text)
-    bk = Book('{}.txt'.format(title))
+    bk = Book('{}.txt'.format(title), **kwargs)
     remove('{}.txt'.format(title))
     return bk
 

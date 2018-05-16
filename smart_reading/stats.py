@@ -27,26 +27,26 @@ def _noun_fdist(book, named_entities = True, exceptions = []):
              and not '.' in word and word not in exceptions] #filter erroneous symbols
     return nltk.FreqDist(nouns)
 
-def plot_freq_dist(book, N = 20, nouns = True, **kwargs):
+def plot_freq_dist(book, no_nodes = 20, nouns = True, named_entities = True, exceptions = [], **kwargs):
     if nouns:
-        fdist = _noun_fdist(book, **kwargs)
-        top = dict(fdist.most_common(N))
+        fdist = _noun_fdist(book, named_entities, exceptions)
+        top = dict(fdist.most_common(no_nodes))
     else:
         fdist = nltk.FreqDist(token for token in book._tokens if re.search('[a-zA-Z]',token))
-        top = dict(fdist.most_common(N))
+        top = dict(fdist.most_common(no_nodes))
     
-    fig = plt.figure()
-    plt.bar(np.arange(N), sorted(top.values(), reverse = True))
+    fig = plt.figure(**kwargs)
+    plt.bar(np.arange(no_nodes), sorted(top.values(), reverse = True))
     labels = sorted(top.keys(), key = lambda x: top[x], reverse = True)
     from sys import version_info
     offset = 0.5 if version_info[0] < 3 else 0.3 # Graphical depiction dependent on Python version
-    plt.xticks(np.arange(offset, offset + N), labels)
-    plt.title('Frequency plot of the {} most common {}'.format(N, 'nouns' if nouns else 'words'))
+    plt.xticks(np.arange(offset, offset + no_nodes), labels)
+    plt.title('Frequency plot of the {} most common {}'.format(no_nodes, 'nouns' if nouns else 'words'))
     fig.autofmt_xdate()
     fig.show()
     
-def plot_network_graph(book, no_nodes = 10, treshold = 3, exclude_empty = True, **kwargs):
-    fdist = _noun_fdist(book, **kwargs)
+def plot_network_graph(book, no_nodes = 10, treshold = 3, exclude_empty = True, named_entities = True, exceptions = [], **kwargs):
+    fdist = _noun_fdist(book, named_entities, exceptions)
     top = dict(fdist.most_common(no_nodes))
     labels = list(top.keys())
     
@@ -67,7 +67,7 @@ def plot_network_graph(book, no_nodes = 10, treshold = 3, exclude_empty = True, 
                 dict_pairs[(pair[1],pair[0])] += 1
     G.add_weighted_edges_from((pair[0],pair[1],dict_pairs[pair]) for pair in label_pairs if dict_pairs[pair] >= treshold)
     
-    fig = plt.figure()
+    fig = plt.figure(**kwargs)
     pos = nx.spring_layout(G)
     colors = [edge[2] for edge in G.edges.data('weight')]
     nx.draw(G, pos, with_labels=True, node_color='#A0CBE2', edge_cmap=plt.cm.coolwarm, edge_color = colors,
