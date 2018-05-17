@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     
 setup(
     name = 'smart_reading',
-    version = '1.1.3',
+    version = '1.1.5',
     description = 'An NLTK-based toolkit aimed at increasing the understanding of various texts.',
     url = 'https://github.com/andredelft/smart_reading',
     packages = find_packages(),

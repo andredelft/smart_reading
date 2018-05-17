@@ -22,18 +22,15 @@ def _noun_fdist(book, named_entities = True, exceptions = []):
             print('\nWarning: named entity exclusion not supported in current Python version\n'
                   'Will continue with regular procedure instead\n')
         nouns = [word.capitalize() for word,tag in book._tags if 'NN' in tag]
-        
-    nouns = [word for word in nouns if re.search('[a-zA-Z]',word) and not len(word) == 1
-             and '.' not in word and word not in exceptions] #filter erroneous symbols
+    
+    exceptions = [word.lower() for word in exceptions]
+    nouns = [word for word in nouns if re.search('[a-zA-Z]',word) and len(word) != 1
+             and '.' not in word and word.lower() not in exceptions] #filter erroneous symbols
     return nltk.FreqDist(nouns)
 
 def plot_noun_hist(book, no_nouns = 20, named_entities = True, exceptions = [], **kwargs):
-    if nouns:
-        fdist = _noun_fdist(book, named_entities, exceptions)
-        top = dict(fdist.most_common(no_nouns))
-    else:
-        fdist = nltk.FreqDist(token for token in book._tokens if re.search('[a-zA-Z]',token))
-        top = dict(fdist.most_common(no_nouns))
+    fdist = _noun_fdist(book, named_entities, exceptions)
+    top = dict(fdist.most_common(no_nouns))
     
     fig = plt.figure(**kwargs)
     plt.bar(np.arange(no_nouns), sorted(top.values(), reverse = True))
@@ -41,7 +38,7 @@ def plot_noun_hist(book, no_nouns = 20, named_entities = True, exceptions = [], 
     from sys import version_info
     offset = 0.5 if version_info[0] < 3 else 0.3 # Graphical depiction dependent on Python version
     plt.xticks(np.arange(offset, offset + no_nouns), labels)
-    plt.title('Frequency plot of the {} most common {}'.format(no_nouns, 'nouns' if nouns else 'words'))
+    plt.title('Frequency plot of the {} most common nouns'.format(no_nouns)
     fig.autofmt_xdate()
     fig.show()
     
