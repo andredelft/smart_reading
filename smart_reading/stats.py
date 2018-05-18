@@ -38,7 +38,7 @@ def plot_noun_hist(book, no_nouns = 20, named_entities = True, exceptions = [], 
     from sys import version_info
     offset = 0.5 if version_info[0] < 3 else 0.3 # Graphical depiction dependent on Python version
     plt.xticks(np.arange(offset, offset + no_nouns), labels)
-    plt.title('Frequency plot of the {} most common nouns'.format(no_nouns)
+    plt.title('Frequency plot of the {} most common nouns'.format(no_nouns))
     fig.autofmt_xdate()
     fig.show()
     
